@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content=""><meta name="author" content="FilesCloud.org"><title>FilesCloud.org</title><meta name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no"><link rel="stylesheet" href="FilesCloud.org_files/bootstrap.css"><link rel="stylesheet" href="FilesCloud.org_files/font-awesome.css"><link rel="stylesheet" href="FilesCloud.org_files/filescloud.css"></head><body><div id="step1"></div><div id="step2" class="active"></div><div id="step3"></div><div style="width:100%;background:red;height:2px"></div><div class="container-fluid header"><div class="container">Feel free to contact us by e-mail:<a href="mailto:support@filescloud.org" title="Contact us"> support@filescloud.org</a><div class="pull-right"></div></div></div><div class="container"><div class="row"><div class="col-md-12"><img src="FilesCloud.org_files/logo.png" alt=""></div></div></div><div class="container-fluid mid"><div class="container"><div class="row"><div class="col-md-5 text-center hidden-sm-down">New, exciting<strong> hosting</strong></div><div class="col-md-2 col-xs-12 text-center"><img src="FilesCloud.org_files/icon.png" alt=""></div><div class="col-md-5 text-center hidden-sm-down">keep your<strong> files on cloud</strong></div></div></div></div><div class="container main-frame"><div class="row"><div class="col-md-12 text-center">Download file:<strong> Fifa 20 ™ ActivationKey.txt</strong></div></div><div class="row" id="offers" style="max-height: 1000px; opacity: 1;"><div class="col-md-12"><div class="row"><div class="col-md-12 text-center"> To download file complete one of offers bellow:</div></div><div class="row" id="campaignsRow"><ul></ul></div></div></div><div class="row" id="waiting"><div class="col-md-12"><div class="row"><div class="col-md-12 text-center"><i class="fa fa-spinner fa-pulse fa-3x"></i><br><br> Your download will be unlocked upon valid participation in the offer of your choice.<br><br><div id="tryAnother"> Go Back and try a different offer.</div></div></div></div></div><div class="row" id="download-zone"><div id="beforeOffers" style="max-height: 0px; opacity: 0;"><div class="row" style="margin-top: 45px;"></div><div class="col-md-12 text-center"><a class="download-button hvr-float-shadow showOffers" href="" title="">DOWNLOAD NOW</a></div><div class="row"></div><div class="col-md-12 text-center"><small>with high speed</small></div></div></div></div><div class="container-fluid prefooter" style="margin-top:25px;padding-top:50px"><div class="container"><div class="row"><div class="col-md-0"></div><div class="col-md-12"><div class="row"><div class="col-md-12 text-center"><h1>Share file with friends</h1></div></div><div class="row" style="margin-top:20px"><div class="col-md-1 col-xs-2 text-center no-margin fake-label"> Link:</div><div class="col-md-11 col-xs-10 text-center no-margin input"><input class="form-control" id="direct" type="text" value="https://filescloud.org/66454bba" readonly="readonly" onclick="this.select()"></div></div><div class="row" style="margin-top:20px"><div class="col-md-1 col-xs-2 text-center no-margin fake-label"> HTML link:</div><div class="col-md-11 col-xs-10 text-center no-margin input"><input class="form-control" id="html" type="text" value="&lt;a href=&quot;https://filescloud.org/66454bba&quot; title=&quot;Fifa 20 ™ ActivationKey.txt&quot;&gt;Fifa 20 ™ ActivationKey.txt&lt;/a&gt;" readonly="readonly" onclick="this.select()"></div></div><div class="row" style="margin-top:20px;margin-bottom:190px"><div class="col-md-1 col-xs-2 text-center no-margin fake-label"> BBCode link:</div><div class="col-md-11 col-xs-10 text-center no-margin input"><input class="form-control" id="bbcode" type="text" value="[url=https://filescloud.org/66454bba]Fifa 20 ™ ActivationKey.txt[/url]" readonly="readonly" onclick="this.select()"></div></div></div></div></div></div><div class="container-fluid header"><div class="container"><div class="row"><div class="col-md-12 text-center"></div>© FilesCloud.org<script>document.write(' ' + new Date().getFullYear())</script> 2020 / Powered by HTML5 &amp; CSS3<script>document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.showOffers').onclick = function ($event) {
+    $event.preventDefault();
+    var before = document.getElementById('beforeOffers');
+    before.style.maxHeight = 0;
+    setTimeout(function () {
+      before.style.opacity = 0;
+    }, 1000);
+    var offerTable = document.getElementById('offers');
+    offerTable.style.maxHeight = '1000px';
+    offerTable.style.opacity = '1';
+    document.getElementById('step1').classList.remove('active');
+    document.getElementById('step2').classList.add('active');
+    document.getElementById('tryAnother').onclick = clickBack;
+  };
+});
+
+function clickOffer() {
+  var waiting = document.getElementById('waiting');
+  var offerTable = document.getElementById('offers');
+  offerTable.style.maxHeight = 0;
+  setTimeout(function () {
+    offerTable.style.opacity = 0;
+  }, 1000);
+  waiting.style.maxHeight = '1000px';
+  waiting.style.opacity = '1';
+}
+
+function clickBack() {
+  var waiting = document.getElementById('waiting');
+  var offerTable = document.getElementById('offers');
+  waiting.style.maxHeight = 0;
+  setTimeout(function () {
+    waiting.style.opacity = 0;
+  }, 1000);
+  offerTable.style.maxHeight = '1000px';
+  offerTable.style.opacity = '1';
+};
+
+function live(tracking) {
+  return fetch('/t/s/' + tracking)
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.redirectUrl) {
+        window.location = res.redirectUrl;
+      }
+
+      setTimeout(() => live(tracking), 60000);
+    });
+}
+
+fetch('/t/l/66454bba')
+        .then((res) => res.json())
+        .then((res) => {
+          const { tracking, campaigns } = res;
+          live(tracking);
+          const campaignsRow = document.getElementById('campaignsRow');
+          const ul = document.createElement('ul');
+
+          campaigns.forEach((campaign) => {
+            const li = document.createElement('li');
+          li.className = 'offer';
+          const html = `<a href="//filescloud.org/t/c/${campaign.tracking}" target="_blank">${campaign.title}</a>`;
+
+          li.innerHTML = html;
+          ul.appendChild(li);
+        })
+          ;
+
+          campaignsRow.appendChild(ul);
+
+          document.querySelectorAll('li.offer a').forEach((a) => {
+            a.onclick = clickOffer;
+        })
+          ;
+        });</script></div></div></div></body></html>
